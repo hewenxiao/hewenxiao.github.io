@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面滚动时动画效果</title>
+    <link rel="stylesheet" href="static/animation.css">
+    <script src="static/wow.min.js"></script>
+    <style>
+        h2{
+            text-align: center;
+            margin: 50px;
+        }
+        .dome {
+            width: 80%;
+            height: 230px;
+            margin: 50px auto;
+            background-color: aqua;
+        }
+
+        div:nth-of-type(2) {
+            background-color: blueviolet;
+            color: #fff;
+        }
+
+        div:nth-of-type(3) {
+            background-color: #2c9bff;
+        }
+
+        div:nth-of-type(4) {
+            background-color: #e25715;
+        }
+
+        div:nth-of-type(5) {
+        }
+
+        pre, xmp {
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2> 基于Animation.CSS  和 wow 的页面滚动动画</h2>
+
+<div class="wow fadeInLeft dome" data-wow-delay="0.5s">
+    <pre>
+        第一步引入
+        1. animation.css
+        2. wow.min.js
+    </pre>
+</div>
+<div class="wow fadeInDownBig dome" data-wow-delay="0.6s">
+     <pre>
+         第二步引入
+        wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 200,
+            callback: function (box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        }
+    );
+    wow.init();
+    </pre>
+</div>
+<div class="wow slideInRight dome" >
+    <xmp>
+        第三步
+        <div class="wow fadeInLeft dome" data-wow-delay="0.2s">
+
+    </xmp>
+</div>
+<div class="wow slideInUp dome"></div>
+
+</body>
+</html>
+
+<script>
+
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 200,
+            callback: function (box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        }
+    );
+    wow.init();
+</script>
+
+</script>
